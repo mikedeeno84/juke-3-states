@@ -1,6 +1,10 @@
 <div class="album">
 	<p>
-		<h3>{{ album.name }}</h3>
+		<h3>{{ album.name }}
+			<a href="{{ mailHref() }}"><button class="btn btn-default btn-xs">
+				<span class="glyphicon glyphicon-share"></span>
+			</button></a>
+		</h3>
 		<img ng-src="{{ album.imageUrl }}" class="img-thumbnail">
 	</p>
 	<table class='table'>
