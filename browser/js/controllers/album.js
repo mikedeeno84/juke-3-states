@@ -11,7 +11,7 @@ app.controller('AlbumCtrl', function ($scope, $location, PlayerFactory, album) {
 		console.log( "getting mail link")
 		return "mailto:" +
 			"?subject=" + $scope.album.name +
-			"?body=Check out this rad album! " + $location.absUrl();
+			"&body=Check out this rad album! " + $location.absUrl();
 	}
 
 	$scope.album = album;

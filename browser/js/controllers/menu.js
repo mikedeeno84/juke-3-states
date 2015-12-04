@@ -1,12 +1,8 @@
-app.controller('MenuCtrl', function ($scope, $rootScope) {
-	$scope.viewAlbums = function () {
-		$rootScope.$broadcast('changeView', {
-			name: 'allAlbums'
-		});
-	};
-	$scope.viewArtists = function () {
-		$rootScope.$broadcast('changeView', {
-			name: 'allArtists'
-		});
-	};
+app.controller('MenuCtrl', function ($rootScope, $scope, $location) {
+	// $rootScope.$on('$locationChangeSuccess', function(){
+	// 	$scope.$digest();
+	// })
+	$scope.isActive=function(route){
+		return $location.path().split('/')[1] === route;
+	}
 });
